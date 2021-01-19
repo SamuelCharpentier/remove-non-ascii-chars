@@ -1,0 +1,46 @@
+{
+	"name": "remove-non-ascii-chars",
+	"displayName": "Remove Non ASCII Chars",
+	"description": "Simple plugin to replace non-ASCII characters to ASCII by removing accents, and remaining non-ASCII characters.",
+	"version": "0.0.1",
+	"publisher": "SamelCharpentier",
+	"repository":""
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "remove-non-ascii-chars.removeNonAsciiInSelectionOrFile",
+				"title": "Remove Non ASCII Characters"
+			},
+			{
+				"command": "remove-non-ascii-chars.removeNonAsciiInEntireFile",
+				"title": "Remove Non ASCII Characters (File)"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
