@@ -3,7 +3,7 @@
 	"displayName": "Remove Non ASCII Chars",
 	"description": "Simple plugin to replace non-ASCII characters to ASCII by removing accents, and remaining non-ASCII characters.",
 	"version": "0.0.5",
-	"publisher": "SamelCharpentier",
+	"publisher": "SamuelCharpentier",
 	"repository": "scharpentier0/remove-non-ascii-chars",
 	"engines": {
 		"vscode": "^1.52.0"
