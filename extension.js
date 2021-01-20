@@ -4,7 +4,7 @@ const document = editor.document;
 
 function removeAccentsInRange(range) {
 	let normalizedString = document.getText(range).normalize('NFD');
-	let accentFreeString = normalizedString.replace(/[^0-9a-zA-Z \n]/g, '');
+	let accentFreeString = normalizedString.replace(/[^\x00-\x7F]/g, '');
 	if (normalizedString !== accentFreeString) {
 		editor.edit((editBuilder) =>
 			editBuilder.replace(range, accentFreeString),
